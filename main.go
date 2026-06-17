@@ -43,10 +43,8 @@ func interpreter(code []byte) error {
 			if arr[ptr] != 0 {
 				pc = brs[pc]
 			}
-		case ' ', '\t', '\n', '\r':
-			continue
 		default:
-			return fmt.Errorf("%c is not exist.", code[pc])
+			continue
 		}
 	}
 	return nil
