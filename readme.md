@@ -1,5 +1,5 @@
 # Go 4 Bf
-This is a compiler for Brainf\*\*k written in Go.
+This is a interpreter for Brainf\*\*k written in Go.
 
 ## Usage
 ```shell

@@ -17,13 +17,13 @@ func main(){
 		os.Exit(1)
 	}
 
-	if err := compile(code); err != nil {
+	if err := interpreter(code); err != nil {
 		fmt.Fprintf(os.Stderr, "runtime error: %v\n", err)
 		os.Exit(1)
 	}
 }
 
-func compile(code []byte) error {
+func interpreter(code []byte) error {
 	arr := make([]byte, 30000)
 	ptr := 0
 	brs := mapBrackets(string(code))
