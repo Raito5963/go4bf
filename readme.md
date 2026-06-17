@@ -16,6 +16,8 @@ go run main.go <file.bf>
 go run main.go hello.bf
 ```
 
+output
+
 ```output
->>Hello World!
+Hello World!
 ```
