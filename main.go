@@ -26,7 +26,7 @@ func main(){
 func compile(code []byte) error {
 	arr := make([]byte, 30000)
 	ptr := 0
-	brackets := mapBrackets(string(code))
+	brs := mapBrackets(string(code))
 	for pc := 0; pc < len(code); pc++ {
 		switch code[pc] {
 		case '>': ptr++
@@ -37,11 +37,11 @@ func compile(code []byte) error {
 		case ',': fmt.Scanf("%c",&arr[ptr])
 		case '[':
 			if arr[ptr] == 0 {
-				pc = brackets[pc]
+				pc = brs[pc]
 			}
 		case ']':
 			if arr[ptr] != 0 {
-				pc = brackets[pc]
+				pc = brs[pc]
 			}
 		case ' ', '\t', '\n', '\r':
 			continue
