@@ -7,7 +7,7 @@ import (
 
 func main(){
 	if len(os.Args) < 2 {
-		fmt.Fprintln(os.Stderr, "usage: bf <file.bf>")
+		fmt.Fprintln(os.Stderr, "usage: <file.bf>")
 		os.Exit(1)
 	}
 
